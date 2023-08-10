@@ -66,7 +66,7 @@ function Home(){
 					<Carousel.Item>
 						<img
 							className='d-block w-100'
-							src='https://mail.google.com/mail/u/0?ui=2&ik=724174be16&attid=0.1.1&permmsgid=msg-f:1773445546046283084&th=189c8b53f8965d4c&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ8twSzWlarZB-aqMskDKaOFaGx-ienHUJO-ZuGlT6hxBBjZd6YG8jnhTQ56U1zkxVPkX_ei4aE4qY5enfHpysR4DPY1JadS8aK4p8lYNwRbEAY5VxORIPvmvXA&disp=emb/800x400?text='
+							src='https://mail.google.com/mail/u/0?ui=2&ik=724174be16&attid=0.1.1&permmsgid=msg-f:1773445546046283084&th=189c8b53f8965d4c&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ8twSzWlarZB-aqMskDKaOFaGx-ienHUJO-ZuGlT6hxBBjZd6YG8jnhTQ56U1zkxVPkX_ei4aE4qY5enfHpysR4DPY1JadS8aK4p8lYNwRbEAY5VxORIPvmvXA&disp=emb/800x400?text'
 							alt='Men Fashion'
 						/>
 						<Carousel.Caption style={{ color: 'white' }}>
@@ -80,7 +80,7 @@ function Home(){
 					active
 					style={{
 						backgroundColor: 'black',
-						marginTop: '2rem',
+						marginTop: '0rem',
 						color: 'white',
 						fontFamily: 'IBM Plex Mono, monospace, Roboto, sans-serif',
 						borderRadius: '10px',
