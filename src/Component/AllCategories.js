@@ -23,7 +23,7 @@ export default function AllCategories({category}) {
 				</Card.Body>
 				<Button
 					variant='outline-dark'
-					size='lg'
+					size='sm'
 					onClick={() => navigate('/ProductParent')}>
 					Start
 				</Button>

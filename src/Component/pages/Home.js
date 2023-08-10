@@ -16,12 +16,19 @@ function Home(){
 					textDecoration: 'none',
 					marginBottom: '3rem',
 				}}>
-				<Carousel data-bs-theme='dark'>
+				<Carousel
+					data-bs-theme='dark'
+					style={{
+						background: 'rgb(255,255,255)',
+						marginTop: '3rem',
+						textDecoration: 'none',
+						marginBottom: '3rem',
+					}}>
 					<Carousel.Item>
 						<img
 							className='d-block w-100'
-							src='https://mail.google.com/mail/u/0?ui=2&ik=724174be16&attid=0.3&permmsgid=msg-a:r7552913750103353408&th=189c2a11e097dab7&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ8HKVsztTgmE1BBzeoZjf5PMwj9RMYOk_DfIHgVCiMADdmp0zoyunU1_9IslZAX4Cidk47ZzXSBAr1tlObvzQ1EfcO9cXTpsVroOtS6hvnePkpwnYGHBC07bCA&disp=emb&realattid=189c2a0fb5be9b742301//800x400?text=Third slide&bg=e5e5e5'
-							alt='First slide'
+							src='https://mail.google.com/mail/u/0?ui=2&ik=724174be16&attid=0.3&permmsgid=msg-a:r7552913750103353408&th=189c2a11e097dab7&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ8HKVsztTgmE1BBzeoZjf5PMwj9RMYOk_DfIHgVCiMADdmp0zoyunU1_9IslZAX4Cidk47ZzXSBAr1tlObvzQ1EfcO9cXTpsVroOtS6hvnePkpwnYGHBC07bCA&disp=emb&realattid=189c2a0fb5be9b742301/800x400?text=First slide&bg=f5f5f5'
+							alt='Furniture'
 						/>
 						<Carousel.Caption
 							style={{
@@ -37,8 +44,8 @@ function Home(){
 						<img
 							className='d-block w-100'
 							src='https://mail.google.com/mail/u/0?ui=2&ik=724174be16&attid=0.1.1&permmsgid=msg-f:1773443864786696713&th=189c89cc85b4fa09&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ9zjF2mFgxZ6y-1vMVMZzsF8JIc0vDWwifme0XQ95qQHyvgNbDqIjX5lXegxHxdb3f2zKb3hsjmhKgR4y-AZpm-3HX2Yia3BcU3S5w9P_YaZY25Nv3BpqAyyRQ&disp=emb
-                            /800x400?text=Third slide&bg=e5e5e5'
-							alt='Second slide'
+                            /800x400?text=Second slide&bg=eee'
+							alt='Electronics'
 						/>
 						<Carousel.Caption style={{ color: 'white' }}>
 							<h1>Electronics</h1>
@@ -49,7 +56,7 @@ function Home(){
 						<img
 							className='d-block w-100'
 							src='https://mail.google.com/mail/u/0?ui=2&ik=724174be16&attid=0.1&permmsgid=msg-a:r7552913750103353408&th=189c2a11e097dab7&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ9d7NGokJ81a0EYj84_jeR6nciOACjcYY4p8Of8dR0NRMSdWp0CJrXfZxRrA8PpIRGmvkxJ7E5c3BCb-s7MIsSnVSCLtAXJ90GuZNBnV-xSB-ETRpS_TvbC-bo&disp=emb&realattid=189c2a1028085712e2f2/800x400?text=Third slide&bg=e5e5e5'
-							alt='Third slide'
+							alt='Women Fashion'
 						/>
 						<Carousel.Caption style={{ color: 'white' }}>
 							<h1>Women Fashion</h1>
@@ -59,8 +66,8 @@ function Home(){
 					<Carousel.Item>
 						<img
 							className='d-block w-100'
-							src='https://mail.google.com/mail/u/0?ui=2&ik=724174be16&attid=0.1.1&permmsgid=msg-f:1773445546046283084&th=189c8b53f8965d4c&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ8twSzWlarZB-aqMskDKaOFaGx-ienHUJO-ZuGlT6hxBBjZd6YG8jnhTQ56U1zkxVPkX_ei4aE4qY5enfHpysR4DPY1JadS8aK4p8lYNwRbEAY5VxORIPvmvXA&disp=emb/800x400?text=Thirdslide&bg=e5e5e5'
-							alt='Third slide'
+							src='https://mail.google.com/mail/u/0?ui=2&ik=724174be16&attid=0.1.1&permmsgid=msg-f:1773445546046283084&th=189c8b53f8965d4c&view=fimg&fur=ip&sz=s0-l75-ft&attbid=ANGjdJ8twSzWlarZB-aqMskDKaOFaGx-ienHUJO-ZuGlT6hxBBjZd6YG8jnhTQ56U1zkxVPkX_ei4aE4qY5enfHpysR4DPY1JadS8aK4p8lYNwRbEAY5VxORIPvmvXA&disp=emb/800x400?text='
+							alt='Men Fashion'
 						/>
 						<Carousel.Caption style={{ color: 'white' }}>
 							<h1>Men Fashion</h1>
@@ -68,16 +75,20 @@ function Home(){
 					</Carousel.Item>
 				</Carousel>
 				<Button
-					variant="secondary" size="lg" active
+					variant='Dark'
+					size='sm'
+					active
 					style={{
+						backgroundColor: 'black',
 						marginTop: '2rem',
 						color: 'white',
 						fontFamily: 'IBM Plex Mono, monospace, Roboto, sans-serif',
 						borderRadius: '10px',
-						marginLeft: '26rem',
+						marginLeft: '27rem',
+						textTransform: 'uppercase',
 					}}
 					onClick={() => navigate('/Index')}>
-					Go somewhere
+					Start
 				</Button>
 			</Container>
 		)

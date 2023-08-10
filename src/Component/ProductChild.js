@@ -1,13 +1,8 @@
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
-import cartContext from '../ contexts/Context'
-import React, { useContext } from 'react'
-
-
-
 export default function ProductChild({ product, handleAddProductToCart }) {
 	// console.log(product)
-	const { setCartItems } = useContext(cartContext)
+
 	return (
 		<>
 			<Card
@@ -36,8 +31,8 @@ export default function ProductChild({ product, handleAddProductToCart }) {
 				</Card.Body>
 				<Button
 					variant='outline-dark'
-					size='lg'
-					onClick={handleAddProductToCart}>
+					size='sm'
+					onClick={() => handleAddProductToCart(product)}>
 					Add to cart
 				</Button>
 			</Card>
