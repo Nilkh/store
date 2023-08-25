@@ -20,24 +20,22 @@ function getProducts() {
 
 
 
-
-
-
+   module.exports = {
+		getCategories,
+		getProducts,
+	}
 
 // function postCategories() {
 // 		return fetch('https://api.escuelajs.co/api/v1/categories', {
-// 			method: 'post',
+// 			method: 'POST',
 // 			headers: {
 // 				'Content-Type': 'application/json',
 // 			},
 // 			body: JSON.stringify({
-// 				name: 'Ring',
+// 				name: 'Women Fashion',
 // 				image:
-// 					'https://www.google.com/aclk?sa=l&ai=DChcSEwiy9uPz1rmAAxU3Bq0GHViIBnQYABAvGgJwdg&ase=2&sig=AOD64_2ySg1_LqdRR9Dsfsz7pyhm3DWUGA&ctype=5&nis=5&adurl&ved=2ahUKEwj64tbz1rmAAxU7DzQIHS9ZDIgQuxd6BQgBEMMD',
-// 				description:
-// 					'Le Vian Natural Garnet Ring 1/2 ct tw Diamonds 14K Strawberry Gold',
-// 				price: '$2,199.99',
-// 			}),
+// 					'https://mail.google.com/mail/u/0?ui=2&ik=724174be16&attid=0.1&permmsgid=msg-f:1773444830497059832&th=189c8aad5e87b3f8&view=att&disp=safe',
+// 				}),
 // 		})
 // 			.then((res) => {
 // 				return res.json()
@@ -45,8 +43,3 @@ function getProducts() {
 // 			.then((data) => data)
 // 			.catch((error) => console.error(error))
 //  }
-
-   module.exports = {
-			getCategories,
-			getProducts
-		}

@@ -12,7 +12,6 @@ import ProductParent from './Component/ProductParent'
 import React, { useState, useEffect } from 'react'
 import ComponentFooter from './Component/pages/ComponentFooter'
 
-
 function App() {
 	const [cartItem , setCartItem] = useState([])
    function handleAddProductToCart(product) {
@@ -44,7 +43,6 @@ function App() {
 	return (
 		<>
 			<NavbarBar cartItem={cartItem} />
-
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='/Home' element={<Home />} />
@@ -71,8 +69,8 @@ function App() {
 						/>
 					}
 				/>
-				{/* <Route path='/ComponentFooter' element={<ComponentFooter/>} /> */}
 			</Routes>
+
 			<ComponentFooter />
 		</>
 	)	

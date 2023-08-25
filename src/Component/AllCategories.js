@@ -2,9 +2,9 @@ import React from "react"
 import { useNavigate } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
-import ProductParent from "./ProductParent"
+
 export default function AllCategories({category}) {
-	// console.log(category)
+	console.log(category)
 	const navigate = useNavigate()
 	return (
 		<>

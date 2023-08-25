@@ -1,10 +1,9 @@
-
 import React from 'react'
 import Button from 'react-bootstrap/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
-export default function GitHub() {
+export default function Linkedin() {
 	return (
 		<div
 			style={{
@@ -14,11 +13,10 @@ export default function GitHub() {
 			}}>
 			<Button
 				variant='secondary'
-				href='https://github.com/Nilkh'
-				target='_blank'
+				href='https://www.linkedin.com/in/nilofar-khsrawy-b4a724268/'
 				size='sm'
 				style={{ transformOrigin: '0 0' }}>
-				<FontAwesomeIcon icon={faGithub} size='1x' />
+				<FontAwesomeIcon icon={faLinkedin} size='1x' />
 			</Button>
 		</div>
 	)

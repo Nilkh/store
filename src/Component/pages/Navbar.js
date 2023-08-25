@@ -1,110 +1,79 @@
-
+import Button from 'react-bootstrap/Button'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
-import About from './About'
-import Home from './Home'
-import Contact from './Contact'
-import Cart from './Cart'
 import { useNavigate } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
-import Spinner from 'react-bootstrap/Spinner'
-import ProductParent from '../ProductParent'
+import Offcanvas from 'react-bootstrap/Offcanvas'
+import Nav from 'react-bootstrap/Nav'
+import NavDropdown from 'react-bootstrap/NavDropdown'
+import Form from 'react-bootstrap/Form'
 
 export default function NavbarBar({ cartItem }) {
-	console.log(cartItem)
+	// console.log(cartItem)
 	const navigate = useNavigate()
 	return (
-		<div
-			style={{
-				background: 'rgb(242, 242, 242)',
-				display: 'flex',
-				fontSize: '1rem',
-				position: 'flex',
-				right: '0',
-				top: '0',
-				height: '60px',
-			}}>
-			<Navbar
-				style={{
-					background: 'rgb(242, 242, 242)',
-					display: 'flex',
-					fontSize: '1rem',
-				}}>
-				<Container
-					style={{
-						fontFamily: 'IBM Plex Sans Condensed, sans-serif',
-						textJustify: '1rem',
-					}}>
-					<h4
+		<>
+			<Navbar expand='xxl' className='bg-body-tertiary mb-3'>
+				<Container fluid>
+					<Navbar.Toggle aria-controls='offcanvasNavbar' />
+					<Navbar.Offcanvas
+						id='offcanvasNavbar'
+						aria-labelledby='offcanvasNavbarLabel'
+						placement='end'>
+						<Offcanvas.Header closeButton>
+							<Offcanvas.Title id='offcanvasNavbarLabel'>
+								Palacio
+							</Offcanvas.Title>
+						</Offcanvas.Header>
+						<Offcanvas.Body>
+							<Nav className='justify-content-end flex-grow-1 pe-3'>
+								<Nav.Link href='/Home'>Home</Nav.Link>
+								<Nav.Link href='/'>Link</Nav.Link>
+								<NavDropdown title='Dropdown' id='offcanvasNavbarDropdown'>
+									<NavDropdown.Item href='#action3'>Action</NavDropdown.Item>
+									<NavDropdown.Item href='#action4'>
+										Another action
+									</NavDropdown.Item>
+									<NavDropdown.Divider />
+									<NavDropdown.Item href='#action5'>
+										Something else here
+									</NavDropdown.Item>
+								</NavDropdown>
+							</Nav>
+							<Form className='d-flex'>
+								<Form.Control
+									type='search'
+									placeholder='Search'
+									className='me-2'
+									aria-label='Search'
+								/>
+								<Button variant='outline-success'>Search</Button>
+							</Form>
+						</Offcanvas.Body>
+					</Navbar.Offcanvas>
+
+					<div
 						style={{
-							fontFamily: 'Dancing Script, cursive',
-							textJustify: '3rem',
-							fontSize: '11px',
-							marginRight: '1rem',
-						}}
-						onClick={() => navigate('/ProductParent')}>
-						El Palacio
-					</h4>
-					<Navbar.Brand
-						href='/Home'
-						style={{
-							fontFamily: 'IBM Plex Sans Condensed, sans-serif',
-							textJustify: '3rem',
-							fontSize: '11px',
-							marginRight: '1rem',
+							marginLeft: '54rem',
+							position: 'left',
 						}}>
-						Home
-					</Navbar.Brand>
-					<Navbar.Brand
-						style={{
-							fontFamily: 'IBM Plex Sans Condensed, sans-serif',
-							textJustify: '3rem',
-							fontSize: '11px',
-							marginRight: '1rem',
-						}}
-						href='/About'>
-						About
-					</Navbar.Brand>
-					<Navbar.Brand
-						style={{
-							fontFamily: 'IBM Plex Sans Condensed, sans-serif',
-							textJustify: '3rem',
-							fontSize: '11px',
-							marginRight: '1rem',
-						}}
-						href='/Contact'>
-						Contact
-					</Navbar.Brand>
+						<FontAwesomeIcon
+							icon={faCartShopping}
+							onClick={() => navigate('/Cart')}
+						/>
+						<span
+							style={{
+								margin: '3px',
+								fontSize: '12px',
+								fontWeight: '700',
+								verticalAlign: 'super',
+							}}>
+							{cartItem.length === 0 ? '' : cartItem.length}
+						</span>
+					</div>
 				</Container>
 			</Navbar>
-
-			{/* <div
-				style={{
-					marginLeft: ' rem',
-					marginTop: '4rem',
-					textAlign: 'center',
-					fontFamily: 'IBM Plex Sans Condensed, sans-serif',
-				}}></div> */}
-			<div
-				style={{
-					marginLeft: '54rem',
-					position: 'left',
-				}}>
-				<FontAwesomeIcon
-					icon={faCartShopping}
-					onClick={() => navigate('/Cart')}
-				/>
-				<span
-					style={{
-						margin: '3px',
-						fontSize: '12px',
-						fontWeight: '700',
-						verticalAlign: 'super',
-					}}>
-					{cartItem.length === 0 ? '' : cartItem.length}
-				</span>
-			</div>
-		</div>
+		</>
 	)
 }

@@ -7,9 +7,10 @@ import Row from 'react-bootstrap/Row'
 export default function Categories() {
 
     const [category, setCategory] = useState({})
-	useEffect(() => {
+
+    useEffect(() => {
 		getCategories().then((data) => {
-				// console.log(data)
+				console.log(data)
             //   const productObj = data.map((item) => {
 			// 	return item
 
@@ -22,6 +23,7 @@ export default function Categories() {
 		<Container>
 			<Row>
 			     {Object.values(category).map((item) => {
+					console.log(category)
 				return <AllCategories category={item} key={item}></AllCategories>
 			   })}
 		   </Row>

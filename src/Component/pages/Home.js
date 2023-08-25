@@ -2,13 +2,12 @@ import React from 'react';
 import Carousel from 'react-bootstrap/Carousel'
 import Container from 'react-bootstrap/Container'
 import { useNavigate } from 'react-router-dom'
-import AllCategories from '../AllCategories'
 import Button from 'react-bootstrap/Button'
+import SearchBar from './SearchBar';
 
-
-function Home(){
-	const navigate = useNavigate();
-    return (
+ export default function Home() {
+		const navigate = useNavigate()
+		return (
 			<Container
 				style={{
 					background: 'rgb(255,255,255)',
@@ -75,13 +74,11 @@ function Home(){
 					</Carousel.Item>
 				</Carousel>
 				<Button
-					variant='Dark'
+					variant='outline-success'
 					size='sm'
-					active
 					style={{
-						backgroundColor: 'black',
+						// backgroundColor: 'black',
 						marginTop: '0rem',
-						color: 'white',
 						fontFamily: 'IBM Plex Mono, monospace, Roboto, sans-serif',
 						borderRadius: '10px',
 						marginLeft: '27rem',
@@ -90,7 +87,7 @@ function Home(){
 					onClick={() => navigate('/Index')}>
 					Start
 				</Button>
+				<SearchBar />
 			</Container>
 		)
-}
-export default Home;
+ }

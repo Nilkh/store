@@ -1,7 +1,6 @@
 import { getProducts } from './api'
 import React, { useState, useEffect ,useContext} from 'react'
 import ProductChild from './ProductChild'
-import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 
 export default function ProductParent({ handleAddProductToCart, }) {
@@ -15,8 +14,7 @@ export default function ProductParent({ handleAddProductToCart, }) {
 	}, [])
 
 	return (
-		<>
-			<Container>
+		<div>
 				<Row>
 					{Object.values(product).map((item) => {
 						return (
@@ -28,7 +26,6 @@ export default function ProductParent({ handleAddProductToCart, }) {
 						)
 					})}
 				</Row>
-			</Container>
-		</>
+		</div >
 	)
 }
