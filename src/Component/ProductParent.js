@@ -8,10 +8,18 @@ export default function ProductParent({ handleAddProductToCart, }) {
 
 	useEffect(() => {
 		getProducts().then((data) => {
-			// console.log(data)
-			setProduct(data)
+			
+					// console.log(data)
+				
+				setProduct(data)
 		})
 	}, [])
+     
+
+    //   function filteredProduct(item) {
+	// 			const filteredProduct = product.filter((el) => el !== item)
+	// 			setProduct(filteredProduct)
+	// 		}
 
 	return (
 		<div>

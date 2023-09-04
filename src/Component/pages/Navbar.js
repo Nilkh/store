@@ -8,8 +8,8 @@ import Offcanvas from 'react-bootstrap/Offcanvas'
 import Nav from 'react-bootstrap/Nav'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import Form from 'react-bootstrap/Form'
-
-export default function NavbarBar({ cartItem }) {
+import CategoriesParent from '../CategoriesParent'
+export default function NavbarBar({ cartItem, category }) {
 	// console.log(cartItem)
 	const navigate = useNavigate()
 	return (
@@ -29,9 +29,13 @@ export default function NavbarBar({ cartItem }) {
 						<Offcanvas.Body>
 							<Nav className='justify-content-end flex-grow-1 pe-3'>
 								<Nav.Link href='/Home'>Home</Nav.Link>
-								<Nav.Link href='/'>Link</Nav.Link>
+								<Nav.Link href='/Index'>Electronics</Nav.Link>
+								<Nav.Link href='/Index'>Jewelry</Nav.Link>
+								<Nav.Link href='/Index'>Man's Clothing</Nav.Link>
+								<Nav.Link href='/Index'>Women Clothing</Nav.Link>
+								<Nav.Link href='/Index'>All categories</Nav.Link>
 								<NavDropdown title='Dropdown' id='offcanvasNavbarDropdown'>
-									<NavDropdown.Item href='#action3'>Action</NavDropdown.Item>
+									<NavDropdown.Item href='#action3'></NavDropdown.Item>
 									<NavDropdown.Item href='#action4'>
 										Another action
 									</NavDropdown.Item>

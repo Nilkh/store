@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 
 export default function AllCategories({category}) {
-	console.log(category)
+	// console.log(category)
 	const navigate = useNavigate()
 	return (
 		<>

@@ -1,10 +1,8 @@
-import Categories from "./CategoriesParent"
-import PostCategory from "./PostCategory";
-function Index({ category , post  }) {
+import CategoriesParent from "./CategoriesParent"
+function Index({ category}) {
 	return (
 		<>
-			<Categories category={category} />
-			{/* <PostCategory post={post} /> */}
+			<CategoriesParent category={category} />
 		</>
 	)
 }
